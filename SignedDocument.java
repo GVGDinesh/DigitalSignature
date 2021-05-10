@@ -25,7 +25,7 @@ import com.itextpdf.signatures.PrivateKeySignature;
 public class SignedDocument {
 	
 	public static final String DEST = "./home/tb123/Desktop/PDF/signature.pdf";
-	public static final String KEYSTORE = "./home/tb123/encryption/ks";
+	public static final String KEYSTORE = "---------------";
 	public static final String SRC = "./home/tb123/Downloads/3864633108.pdf";
 	
 	 public static final char[] PASSWORD = "password".toCharArray();
