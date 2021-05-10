@@ -30,7 +30,7 @@ public class SignedDocument {
 	
 	 public static final char[] PASSWORD = "password".toCharArray();
 	 
-	 //public static final String[] RESULT_FILES = new String[] { "signed.pdf" };
+	 public static final String[] RESULT_FILE = new String[] { "signed.pdf" };
 	 
 	 
 	 public void sign(String src, String dest, Certificate[] chain, PrivateKey pk, String digestAlgorithm,
@@ -78,8 +78,8 @@ public class SignedDocument {
 	 
 	        SignedDocument app = new SignedDocument();
 	        
-	        app.sign(SRC, String.format(DEST, 1), chain, pk, DigestAlgorithms.SHA256,
-	        		provider.getName(), CryptoStandard.CMS, "Test 1", "Ghent");
+	       app.sign(SRC, DEST + RESULT_FILE, chain, pk, DigestAlgorithms.SHA256, provider.getName(),
+	                PdfSigner.CryptoStandard.CMS, "Test 1", "Ghent");
 	        	     				
 	}
 
